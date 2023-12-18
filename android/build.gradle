@@ -2,14 +2,14 @@ group 'com.example.maps_launcher'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.21'
+    ext.kotlin_version = '1.9.0'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.2.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -25,7 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    namespace = "com.example.maps_launcher"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -41,6 +41,7 @@ android {
     }
 
     defaultConfig {
+        compileSdk 33
         minSdkVersion 16
     }
 }
